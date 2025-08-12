@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<!-- Project Detail Page -->
+<html>
+	<head>
+		<title>Project 3 – Crime in Chicago</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<div class="inner">
+
+					<!-- Logo -->
+					<a href="index.html" class="logo">
+						<span class="symbol"><img src="images/logo.svg" alt="" /></span>
+						<span class="title">My Projects</span>
+					</a>
+
+					<!-- Nav 
+					<nav>
+						<ul>
+							<li><a href="#menu">Menu</a></li>
+						</ul>
+					</nav>-->
+
+				</div>
+			</header>
+
+			<!-- Menu -->
+			<nav id="menu">
+				<h2>Menu</h2>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="project1.html">Project 1</a></li>
+					<li><a href="project2.html">Project 2</a></li>
+					<li><a href="project3.html">Project 3</a></li>
+				</ul>
+			</nav>
+
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
+					<h1>Crime in Chicago</h1>
+					<p>
+						Gun violence remains a critical issue in the United States, with 118 daily deaths in 2023 and Americans facing a gun-related death rate 25 times higher than other high-income countries. This project focuses on Chicago, a city with notably high levels of gun violence, recording 2,684 shooting victimizations in 2023 alone. The research investigates trends in Chicago gun crime from 2010 to 2023, analyzing how factors such as racial composition, educational attainment, age, sex, and geographic location relate to its prevalence. Data from the Chicago Data Portal on gunshot injuries, crime categories, and locations were combined with over eight Chicago Public Schools datasets to explore the relationship between educational outcomes and violent crime. By examining these variables together, the study aims to provide a comprehensive understanding of gun violence determinants in Chicago and offer insights on targeting resources to high-risk neighborhoods. All data used are publicly available through the City of Chicago’s Data Portal, established in 2012 to enhance access to government data
+					</p>
+                    <p>
+						The data cleaning process was complex and involved multiple steps. Initially, all raw datasets were imported. The main gun violence dataset was standardized by normalizing category labels, separating datetime fields, and removing irrelevant columns. Eight school datasets spanning different years were then preprocessed, requiring extensive standardization due to inconsistent column names and varied performance metrics. To create comparable measures across datasets, manual rankings were developed by averaging test scores and other key metrics such as family involvement and educational attainment. These rankings were standardized by zipcode. This approach enabled a unified performance metric for analysis. Detailed procedures can be found in the data cleaning notebook.
+                    <span class="image main"><img src="images/table5include.png" alt="assumptions" /></span>
+                    <p>
+                    <span class="image main"><img src="images/table6include.png" alt="linear regression" /></span>
+					<h2>Tools & Methods</h2>
+					<ul>
+						<li>Python (pandas, numpy, statsmodels, matplotlib)</li>
+                        <li>Structured Query Language</li>
+						<li>Exploratory Data Analysis</li>
+						<li>Data Cleaning, Merging, & Filtering</li>
+                        <li>Advanced Regression Analysis</li>
+					</ul>
+                    <h2>Additional Contributors</h2>
+                    <ul>
+                      <li>Abhay Gupta</li>
+                      <li>Emily Fu</li>
+                    </ul>
+					<a href="index.html" class="button">← Back to Projects</a>
+                
+				</div>
+			</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<section>
+						<h2>Get in touch</h2>
+						<p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+					</section>
+				</div>
+			</footer>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
