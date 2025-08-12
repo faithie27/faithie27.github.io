@@ -3340,4 +3340,53 @@ input, select, textarea {
 		  #main h1 {
 			color: #000000;
 		  }
-		  
+
+/* Style for poem links replacing the button style */
+.poem-link {
+	text-decoration: none;       /* no underline */
+	color: #3366cc;              /* a nice calm blue */
+	font-size: 0.9rem;           /* slightly smaller */
+	font-weight: 500;
+	transition: color 0.3s ease;
+	display: inline-flex;        /* for proper arrow alignment */
+	align-items: center;
+	gap: 0.3em;                  /* space between text and arrow */
+  }
+  
+  .poem-link:hover {
+	color: #1a3a8c;              /* darker blue on hover */
+	text-decoration: underline; /* underline on hover for clarity */
+  }
+
+  .poem-snapshot {
+	color: #5c7085; /* brighter slate blue-gray */
+  }
+
+  .poem-snapshot-title {
+	text-transform: none;
+  }
+
+
+  .poem-snapshot-title {
+	margin-bottom: 0.4rem; /* slightly more space below title */
+  }
+  
+  .poem-blurb {
+	margin-top: 0;          /* no extra top margin */
+	padding-left: 1.5rem;   /* space for the dash */
+	position: relative;
+	font-style: normal;     /* remove italics */
+	color: inherit;         /* default text color */
+  }
+  
+  .poem-blurb::before {
+	content: "–";
+	position: absolute;
+	left: 0;
+	color: #999;            /* subtle dash color */
+	font-weight: bold;
+	font-size: 1.2em;
+	line-height: 1;
+  }
+  
+  
