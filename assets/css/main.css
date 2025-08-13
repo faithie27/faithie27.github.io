@@ -3399,6 +3399,55 @@ input, select, textarea {
 	margin-right: auto;
 	border-radius: 1px;
   }
-  
-  
+
+
+/* Default: no overlay */
+.tiles article.style1 > .image:before,
+.tiles article.style2 > .image:before,
+.tiles article.style3 > .image:before,
+.tiles article.style4 > .image:before,
+.tiles article.style5 > .image:before,
+.tiles article.style6 > .image:before {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0.5;
+}
+
+/* Hover: semi-transparent colored overlay */
+body:not(.is-touch) .tiles article.style1:hover > .image:before { 
+    background-color: #8499e7; 
+    opacity: 0.75; /* lighter overlay for image visibility */
+}
+body:not(.is-touch) .tiles article.style2:hover > .image:before { 
+    background-color: #7ecaf6; 
+    opacity: 0.75; 
+}
+body:not(.is-touch) .tiles article.style3:hover > .image:before { 
+    background-color: #7bd0c1; 
+    opacity: 0.75; 
+}
+body:not(.is-touch) .tiles article.style4:hover > .image:before { 
+    background-color: #c75b9b; 
+    opacity: 0.75; 
+}
+body:not(.is-touch) .tiles article.style5:hover > .image:before { 
+    background-color: #ae85ca; 
+    opacity: 0.75; 
+}
+body:not(.is-touch) .tiles article.style6:hover > .image:before { 
+    background-color: #f2849e; 
+    opacity: 0.75; 
+}
+.tiles article {
+    height: 300px; /* or any size that matches your right tiles */
+    display: flex;
+    flex-direction: column;
+}
+.tiles article .image {
+    flex: 1 1 auto; /* ensures the image fills the space proportionally */
+    overflow: hidden; /* prevents images from stretching outside */
+}
+.tiles article .content {
+    flex: 0 0 auto; /* keeps text area from growing the tile */
+}
+
   
