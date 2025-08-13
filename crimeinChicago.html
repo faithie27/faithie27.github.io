@@ -70,6 +70,9 @@
 						Research Subquestions
 					</h2>
 					<p>
+						The following questions motivated the regression models we constructed:
+					</p>
+					<p>
 						Subquestion 1: How do the months of the year differ in terms of the probability of gun violence which occurs in that month?
 					</p>
 					<p>
@@ -81,6 +84,22 @@
 					<h2>
 						Key Insights
 					</h2>
+					<p>
+						Regarding subquestion 1, we chose to run a multivariate linear regression with the inputs being binary variables for each month. There were 11 binary variables total and the reference variable was January. Since each indicator variable was binary, that just means the coefficient tells us how the probability of a gunshot-related incident changes when the month changes from January to another month. Our analysis revealed that the month with the highest probability of a gunshot-related incident was July, which is likely influenced by educational factors that may play a role in reducing crime rates.
+					</p>
+					<span class="image main"><img src="images/Screenshot 2025-08-13 at 15.49.09.png" alt="assumptions" /></span>
+					<p>
+						Regarding subquestion 2, we hypothesized that there was a positive linear relationship between the frequency of gunshot violence and higher educational rank (indicating worse test scores). Using a linear regression model, we analyzed the effect of “AverageRank” on gunshot violence frequency, writing a function to run the process for each year.
+						We first used scikit-learn to split each year’s data into a training set (80%) and a test set (20%), calculated the coefficient and intercept, and confirmed through residual plots that the data was randomly distributed and not heteroskedastic. We then used statsmodels OLS regression to assess statistical significance. For every year, the p-value of the coefficient was under 0.05 and close to 0, supporting rejection of the null hypothesis.
+						Model performance was evaluated with RMSE and MAE for the test set and through six-fold cross-validation, with low values indicating good generalization. Results showed that a one-unit increase in AverageRank corresponded to an increase in gunshot occurrences equal to the coefficient. For example, in 2011–2012, a coefficient of 1.767 and an intercept of −9.875 indicated that a one-unit rise in AverageRank was predicted to increase gunshot occurrences by 1.767. Overall, the findings suggested that lower ranked schools were associated with higher occurrences of gunshot-related incidents.
+					</p>
+					<p>
+						Regarding subquestion 3, the model produced several results, but only one predictor variable was statistically significant. The race category “Black” had a coefficient different from zero with a p-value under 0.05, while most other predictors, despite having nonzero coefficients, had p-values above 0.05 and were not statistically significant. This meant the null hypothesis could not be rejected, as significance was found in only one category rather than across race, age group, zipcode, and average rank.
+						All else equal, being African American in the same zipcode and age group as the reference variable (a white male age 80+ in zipcode 60605) was associated with 3.3951 more occurrences of gunshot injuries. While the model’s predictions would be unrealistic for values below zero, the coefficients allowed for meaningful relative comparisons. Including “AverageRank” remained important in calculating gun violence risk, as it was a continuous variable rather than a dummy variable.
+					</p>
+					<p>
+						The analysis showed that gun violence in Chicago was a multi-faceted problem and highlighted novel approaches for exploring and explaining it. Race emerged as the most significant predictor of one’s chances of experiencing gun violence, a finding that could encourage local leaders to address these disparities. The data also revealed a seasonal pattern, with violence peaking in July. These trends suggest that targeted interventions during specific months could help reduce gun crime in the city.
+					</p>
 					<hr class="section-divider" />
 					<h2>Tools & Methods</h2>
 					<ul>
@@ -96,6 +115,9 @@
                       <li>Abhay Gupta</li>
                       <li>Emily Fu</li>
                     </ul>
+					<p>
+						Note: It was a pleasure to work with both of my teammates on this project. Their expertise and contributions were invaluable, and I learned so much from both of them.
+					</p>
 					<a href="index.html" class="button">← Home</a>
                 
 				</div>
